@@ -34,6 +34,11 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     title: fin_gender
+  wallet_notification:
+    title: fin_wallet_notification
+    client: full
+    server: full
+    columns: []
   fin_lendor_business_type:
     client: full
     server: full
@@ -436,7 +441,7 @@ db_schema:
       type: string
     - name: customer_id
       admin_ui: {width: 200}
-      type: number
+      type: string
   fin_borrower_salary_type:
     client: full
     server: full
@@ -474,9 +479,6 @@ db_schema:
     - name: gender
       admin_ui: {width: 200, order: 7}
       type: string
-    - name: date_of_birth
-      admin_ui: {width: 200, order: 8}
-      type: date
     - name: aadhaar_photo
       admin_ui: {order: 13, width: 200}
       type: media
@@ -735,9 +737,6 @@ db_schema:
     - name: lending_period
       admin_ui: {width: 200, order: 107}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200}
-      type: date
     - name: spouse_annual_salary
       admin_ui: {width: 200}
       type: string
@@ -786,12 +785,13 @@ db_schema:
     - name: father_occupation
       admin_ui: {width: 200}
       type: string
+    - name: year_estd
+      admin_ui: {width: 200}
+      type: string
+    - name: date_of_birth
+      admin_ui: {width: 200, order: 10.25}
+      type: string
     title: fin_user_profile
-  fin_wallet_notification:
-    title: fin_wallet_notification
-    client: full
-    server: full
-    columns: []
   fin_wallet_transactions:
     title: fin_wallet_transactions
     client: full
