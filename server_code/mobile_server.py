@@ -288,7 +288,8 @@ def add_loan_data(loan_amount, loan_tenure, roi, total_repayment, date_of_apply)
             loan_updated_status = "under process",
             total_repayment_amount=float(total_repayment),
             interest_rate=float(roi),
-            borrower_loan_created_timestamp=date_of_apply
+            borrower_loan_created_timestamp=date_of_apply,
+            borrower_email_id=email
         )
 
         # You can also return the loan ID if needed
@@ -296,6 +297,7 @@ def add_loan_data(loan_amount, loan_tenure, roi, total_repayment, date_of_apply)
     except Exception as e:
         # Handle exceptions appropriately
         raise anvil.server.NoServerFunctionError(f"Anvil error: {e}")
+
 
 @anvil.server.callable
 def generate_loan_id():
