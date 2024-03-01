@@ -67,7 +67,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -118,6 +118,9 @@ db_schema:
     - name: customer_id
       admin_ui: {width: 200, order: 0.5}
       type: number
+    - name: loan_id
+      admin_ui: {width: 200}
+      type: string
     title: fin_wallet
   fin_lendor_manage_dropdown:
     title: fin_lendor_manage_dropdown
@@ -468,12 +471,12 @@ db_schema:
     - name: wallet_id
       admin_ui: {width: 200, order: 11}
       type: string
-    - name: customer_id
-      admin_ui: {order: 3.5, width: 200}
-      type: number
-    - name: borrower_since
-      admin_ui: {order: 4.5, width: 200}
+    - name: borrower_approve_date
+      admin_ui: {width: 200}
       type: date
+    - name: customer_id
+      admin_ui: {width: 200}
+      type: string
   fin_borrower_salary_type:
     client: full
     server: full
@@ -511,9 +514,6 @@ db_schema:
     - name: gender
       admin_ui: {width: 200, order: 7}
       type: string
-    - name: date_of_birth
-      admin_ui: {width: 200, order: 8}
-      type: date
     - name: aadhaar_photo
       admin_ui: {order: 13, width: 200}
       type: media
@@ -772,9 +772,6 @@ db_schema:
     - name: lending_period
       admin_ui: {width: 200, order: 107}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200}
-      type: date
     - name: spouse_annual_salary
       admin_ui: {width: 200}
       type: string
@@ -821,6 +818,12 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: father_occupation
+      admin_ui: {width: 200}
+      type: string
+    - name: date_of_birth
+      admin_ui: {width: 200}
+      type: string
+    - name: year_estd
       admin_ui: {width: 200}
       type: string
     title: fin_user_profile
