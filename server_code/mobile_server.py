@@ -362,3 +362,28 @@ def get_product_names(product_group, product_category):
         print(f"Error in get_product_names: {e}")
         return {'error': str(e)}
 
+
+@anvil.server.callable
+def deposit_money(deposit_amount, customer_id):
+    # Here you can implement the logic to deposit money into the user's wallet
+    # You can access the current user's ID using anvil.users.get_user() method
+    # Example:
+    user_id = customer_id
+    user = app_tables.fin_wallet.get(user_id=user_id)
+    user["balance"] += deposit_amount
+    user.save()
+
+@anvil.server.callable
+def withdraw_money(amount):
+    # Here you can implement the logic to withdraw money from the user's wallet
+    # For example, you can update the user's balance in the 'fin_wallet' table
+    # You can access the current user's ID using anvil.users.get_user() method
+    # Example:
+    user_id = anvil.users.get_user()["id"]
+    user = app_tables.fin_wallet.get(user_id=user_id)
+    
+    if user["balance"] >= amount:
+        user["balance"] -= amount
+        user.save()
+    else:
+        raise ValueError("Insufficient balance")
