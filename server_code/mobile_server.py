@@ -94,19 +94,49 @@ def get_foreclose_data( outstading_amount, forecloser_fee, forecloser_amount):
 
 
 @anvil.server.callable
-def get_credit_limit(customer_id):
+def add_loan(product_id, product_name):
+    try:
+        # Assuming 'fin_loan_details' is the name of your Anvil table
+        data = app_tables.fin_loan_details.add_row(
+            product_id=str(product_id),
+            product_name=product_name
+        )
+
+        # You can also return the loan ID if needed
+        return data
+        
+            
+    except Exception as e:
+        # Handle other exceptions appropriately
+        raise anvil.server.NoServerFunctionError(f"Anvil error: {e}")
+@anvil.server.callable
+def get_product():
     try:
         # Fetch all rows with the specified customer_id
-        data = app_tables.fin_borrower.search(customer_id=customer_id)
+        data = app_tables.fin_product_details.search()
 
-        # If there is data for the specified customer_id, extract the 'credit_limit'
-        credit_limit = data[0]['credit_limit'] if data else None
-
-        return credit_limit
+        # If there is data for the specified product_id
+        product = data[0]['product_id'] if data else None
+        return product
     except Exception as e:
         # Handle exceptions gracefully (log or print the error)
         print(f"An error occurred in get_credit_limit: {e}")
         return None
+      
+@anvil.server.callable
+def get_credit_limit():
+    try:
+        data = app_tables.fin_borrower.search()
+
+        # If there is data for the specified product_id
+        product = data[0]['credit_limit'] if data else None
+        
+        return product
+    except Exception as e:
+        # Handle exceptions gracefully (log or print the error)
+        print(f"An error occurred in get_credit_limit: {e}")
+        return None
+
 
 @anvil.server.callable
 def get_max_tenure(selected_category):
