@@ -263,7 +263,7 @@ def calculate_total_repayment(selected_category, loan_amount, loan_tenure):
 
 
 @anvil.server.callable
-def add_loan_data(loan_amount, loan_tenure, roi, total_repayment, date_of_apply):
+def add_loan_data(loan_amount, loan_tenure, roi, total_repayment, date_of_apply, product_id, product_name):
     try:
         # Assuming 'fin_loan_details' is the name of your Anvil table
         email = another_method()
@@ -293,7 +293,9 @@ def add_loan_data(loan_amount, loan_tenure, roi, total_repayment, date_of_apply)
             total_repayment_amount=float(total_repayment),
             interest_rate=float(roi),
             borrower_loan_created_timestamp=date_of_apply,
-            borrower_email_id=email
+            borrower_email_id=email,
+            product_id=product_id,  # Add product_id to the database
+            product_name=product_name  # Add product_name to the database
         )
 
         # You can also return the loan ID if needed
