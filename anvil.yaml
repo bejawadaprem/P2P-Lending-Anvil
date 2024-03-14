@@ -750,9 +750,6 @@ db_schema:
     - name: lending_period
       admin_ui: {width: 200, order: 107}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200}
-      type: date
     - name: spouse_annual_salary
       admin_ui: {width: 200}
       type: string
@@ -816,6 +813,9 @@ db_schema:
     - name: month_estd
       admin_ui: {width: 200}
       type: number
+    - name: year_estd
+      admin_ui: {width: 200, order: 4.5}
+      type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
