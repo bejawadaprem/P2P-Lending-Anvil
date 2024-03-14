@@ -28,9 +28,9 @@ def add_data(customer_id, email, password, name, number, enable):
       id_w.append(i['wallet_id'])
 
   if len(id_w) >= 1:
-      wallet_id = 'WI' + str(int(id_w[-1][2:]) + 1)
+      wallet_id = 'WA' + str(int(id_w[-1][2:]) + 1)
   else:
-      wallet_id = 'WI' + str(1000)
+      wallet_id = 'WA' + str(1000)
   print(wallet_id)
   tables.app_tables.users.add_row(email=email, password_hash=password, enabled=enable)
   tables.app_tables.fin_user_profile.add_row(customer_id=customer_id, email_user=email, full_name=name, mobile=number)
