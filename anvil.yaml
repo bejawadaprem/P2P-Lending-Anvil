@@ -79,9 +79,6 @@ db_schema:
     - name: ref_admin_email
       admin_ui: {width: 200, order: 8}
       type: string
-    - name: ref_admin_name
-      admin_ui: {width: 200, order: 11}
-      type: string
     title: fin_admin_users
   fin_lendor_salary_type:
     client: full
@@ -758,9 +755,6 @@ db_schema:
     - name: lending_period
       admin_ui: {width: 200, order: 107}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200}
-      type: date
     - name: spouse_annual_salary
       admin_ui: {width: 200}
       type: string
@@ -824,9 +818,6 @@ db_schema:
     - name: business_age
       admin_ui: {width: 200}
       type: number
-    - name: profession
-      admin_ui: {width: 200}
-      type: string
     - name: self_employment
       admin_ui: {width: 200}
       type: string
@@ -835,6 +826,12 @@ db_schema:
       type: string
     - name: credit_card_loans
       admin_ui: {width: 200, order: 80.25}
+      type: string
+    - name: month_estd
+      admin_ui: {width: 200}
+      type: number
+    - name: year_estd
+      admin_ui: {width: 200}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
@@ -1068,7 +1065,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
