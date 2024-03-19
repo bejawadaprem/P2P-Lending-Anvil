@@ -103,7 +103,7 @@ db_schema:
       admin_ui: {width: 200}
       type: string
   fin_lendor_no_of_employees:
-    client: none
+    client: full
     server: full
     columns:
     - name: lendor_no_of_employees
@@ -260,6 +260,9 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: product_description
+      admin_ui: {width: 200}
+      type: string
+    - name: product_discription
       admin_ui: {width: 200}
       type: string
     title: fin_product_details
@@ -769,9 +772,6 @@ db_schema:
     - name: lending_period
       admin_ui: {width: 200, order: 107}
       type: string
-    - name: year_estd
-      admin_ui: {width: 200}
-      type: date
     - name: spouse_annual_salary
       admin_ui: {width: 200}
       type: string
@@ -846,6 +846,12 @@ db_schema:
       type: string
     - name: credit_card_loans
       admin_ui: {order: 81.25, width: 200}
+      type: string
+    - name: month_estd
+      admin_ui: {width: 200}
+      type: number
+    - name: year_estd
+      admin_ui: {width: 200}
       type: string
     title: fin_user_profile
   fin_admin_beseem_categories:
