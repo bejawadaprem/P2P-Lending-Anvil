@@ -26,128 +26,6 @@ runtime_options: {version: 2, client_version: '3', server_version: python3-sandb
 metadata: {title: 'P2P Bank ', description: this app provide services to person who are ready to invest and ready to give loan}
 startup_form: null
 db_schema:
-  ? '[]_________loan_id__[]_________s___0_________for_i_in_data______________s____1_____________customer_id_append_i[_borrower_customer_id_]______________loan_id_append_i[_loan_id_]______________borrower_name_append_i[_borrower_full_name_]______________loan_status_append_i[_loan_updated_status_]______________product_name_append_i[_product_name_]______________email1_append_i[_borrower_email_id_]___________profile_customer_id___[]_________profile_mobile_number___[]_________profile_email_id___[]_________profile_account_number___[]__________for_i_in_profile______________profile_customer_id_append_i[_customer_id_]______________profile_mobile_number_append_i[_mobile_]______________profile_email_id_append__email_user_______________profile_account_number_append__account_number___________cos_id___none_________index____1_________if_email_in_profile_email_id______________index___profile_email_id_index_email___________if_email_in_email1______________index___email1_index_email______________cos_id___customer_id[index]__________if_cos_id_is_not_none______________print_cos_id_type_cos_id_______________print_customer_id[_1]__type_customer_id[_1]_______________c____1_____________index_list___[]_____________for_i_in_range_s___________________c____1_________________if_customer_id[c]____cos_id______________________index_list_append_c_______________b___1_____________k____1_____________for_i_in_index_list__________________b____1_________________k____1_________________number___profile_customer_id_index_customer_id[i]__________________item___threelineavatariconlistitem_______________________iconleftwidget__________________________icon__card_account_details_outline_____________________________________________text_f_borrower_name____borrower_name[i]________________________secondary_text_f_mobile_number____profile_mobile_number[number]________________________tertiary_text_f_product_name____product_name[i]________________________text_color__0__0__0__1______black_color_____________________theme_text_color__custom_______________________secondary_text_color__0__0__0__1_______________________secondary_theme_text_color__custom_______________________tertiary_text_color__0__0__0__1_______________________tertiary_theme_text_color__custom____________________________________item_bind_on_release_lambda_instance__loan_id_loan_id[i]__self_icon_button_clicked_instance__loan_id___________________self_ids_container_add_widget_item_______def_icon_button_clicked_self__instance__loan_id_____________highlight_the_selected_item_________self_highlight_item_instance___________data___self_get_table_data______fetch_data_here_________loan_status___none_________for_loan_in_data______________if_loan[_loan_id_]____loan_id__________________loan_status___loan[_loan_updated_status_]_________________break__________sm___self_manager____________create_a_new_instance_of_the_applicationtrackerscreen_________approved___applicationtrackerscreen_name__applicationtrackerscreen______________add_the_applicationtrackerscreen_to_the_existing_screenmanager_________sm_add_widget_approved_____________switch_to_the_applicationtrackerscreen_________sm_current____applicationtrackerscreen__________self_manager_get_screen__applicationtrackerscreen___initialize_with_value_loan_id__data_______def_highlight_item_self__item_____________deselect_all_other_items_________self_deselect_items______________change_the_background_color_of_the_clicked_item_to_indicate_selection_________item_bg_color____0_5__0_5__0_5__1_____change_color_as_desired_________self_selected_item___item______def_deselect_items_self_____________deselect_all_items_in_the_list_________for_item_in_self_ids_container_children______________if_isinstance_item__threelineavatariconlistitem___________________item_bg_color____1__1__1__1_____reset_background_color_for_all_items______def_get_table_data_self_____________make_a_call_to_the_anvil_server_function___________replace__youranvilfunction__with_the_actual_name_of_your_anvil_server_function_________return_anvil_server_call__get_table_data________def_get_table_self_____________make_a_call_to_the_anvil_server_function___________replace__youranvilfunction__with_the_actual_name_of_your_anvil_server_function_________return_anvil_server_call__another_method________def_profile_self_____________make_a_call_to_the_anvil_server_function___________replace__youranvilfunction__with_the_actual_name_of_your_anvil_server_function_________return_anvil_server_call__profile________def_on_pre_enter_self_____________bind_the_back_button_event_to_the_on_back_button_method_________window_bind_on_keyboard_self_on_back_button_______def_on_pre_leave_self_____________unbind_the_back_button_event_when_leaving_the_screen_________window_unbind_on_keyboard_self_on_back_button_______def_on_back_button_self__instance__key__scancode__codepoint__modifier____________if_key____27______________self_go_back_______________return_true_________return_false______def_refresh_self___________self_ids_container_clear_widgets___________self___init__________def_go_back_self___________self_manager_current____dashboardscreen____class_windowmanager_screenmanager_______pass'
-  : client: full
-    server: full
-    columns:
-    - name: borrower_email_id
-      admin_ui: {order: 0.125, width: 200}
-      type: string
-    - name: borrower_full_name
-      admin_ui: {order: 0.25, width: 155}
-      type: string
-    - name: interest_rate
-      admin_ui: {order: 8.75, width: 124}
-      type: number
-    - name: loan_status
-      admin_ui: {order: 26, width: 115}
-      type: bool
-    - name: application_status
-      admin_ui: {order: 16, width: 158}
-      type: bool
-    - name: total_repayment_amount
-      admin_ui: {order: 1.5, width: 200}
-      type: number
-    - name: borrower_customer_id
-      admin_ui: {order: -1, width: 200}
-      type: number
-    - name: member_rom
-      admin_ui: {order: 15.4921875, width: 125}
-      type: string
-    - name: loan_updated_status
-      admin_ui: {order: 0.625, width: 200}
-      type: string
-    - name: lender_full_name
-      admin_ui: {order: 5.375, width: 144}
-      type: string
-    - name: member_since
-      admin_ui: {order: 15.49609375, width: 135}
-      type: date
-    - name: loan_id
-      admin_ui: {order: 0.4375, width: 108}
-      type: string
-    - name: borrower_compLeted_monthly_emi
-      admin_ui: {order: 27, width: 259}
-      type: number
-    - name: lender_email_id
-      admin_ui: {order: 11, width: 209}
-      type: string
-    - name: days_left
-      admin_ui: {order: 28, width: 118}
-      type: number
-    - name: foreclosure_type
-      admin_ui: {order: 23, width: 200}
-      type: string
-    - name: loan_closed_date
-      admin_ui: {order: 23, width: 200}
-      type: date
-    - name: lender_customer_id
-      admin_ui: {order: 5.25, width: 156}
-      type: number
-    - name: beseem_score
-      admin_ui: {order: 15.4765625, width: 129}
-      type: number
-    - name: emi_due_date
-      admin_ui: {order: 23, width: 138}
-      type: date
-    - name: borrower_loan_created_timestamp
-      admin_ui: {order: 8.5, width: 261}
-      type: date
-    - name: product_id
-      admin_ui: {order: 5, width: 103}
-      type: string
-    - name: borrower_first_payment_done
-      admin_ui: {width: 200, order: 27}
-      type: date
-    - name: borrower_last_payment_done
-      admin_ui: {order: 15.5, width: 244}
-      type: date
-    - name: total_payments_made
-      admin_ui: {width: 200, order: 29}
-      type: number
-    - name: membership_type
-      admin_ui: {order: 15.375, width: 139}
-      type: string
-    - name: tenure
-      admin_ui: {order: 8.875, width: 117}
-      type: number
-    - name: loan_amount
-      admin_ui: {order: 0.625, width: 118}
-      type: number
-    - name: lender_accepted_timestamp
-      admin_ui: {order: 15.25, width: 241}
-      type: datetime
-    - name: credit_limit
-      admin_ui: {order: 20.75, width: 122}
-      type: number
-    - name: loan_disbursed_timestamp
-      admin_ui: {order: 15.4375, width: 228}
-      type: datetime
-    - name: loan_extension_months
-      admin_ui: {width: 200, order: 31}
-      type: number
-    - name: first_emi_payment_due_date
-      admin_ui: {order: 15.46875, width: 228}
-      type: date
-    - name: emi_payment_type
-      admin_ui: {order: 15.453125, width: 200}
-      type: string
-    - name: product_name
-      admin_ui: {order: 15.4453125, width: 120}
-      type: string
-    - name: total_interest_amount
-      admin_ui: {order: 0.75, width: 200}
-      type: number
-    - name: total_processing_fee_amount
-      admin_ui: {width: 200}
-      type: number
-    - name: product_description
-      admin_ui: {order: 20.5, width: 200}
-      type: string
-    - name: monthly_emi
-      admin_ui: {width: 200, order: 0.5}
-      type: number
-    title: fin_loan_details
   fin_gender:
     client: full
     server: full
@@ -1261,6 +1139,128 @@ db_schema:
       admin_ui: {order: -2, width: 200}
       type: string
     title: fin_guarantor_details
+  fin_loan_details:
+    client: full
+    server: full
+    columns:
+    - name: borrower_email_id
+      admin_ui: {order: 0.125, width: 200}
+      type: string
+    - name: borrower_full_name
+      admin_ui: {order: 0.25, width: 155}
+      type: string
+    - name: interest_rate
+      admin_ui: {order: 8.75, width: 124}
+      type: number
+    - name: loan_status
+      admin_ui: {order: 26, width: 115}
+      type: bool
+    - name: application_status
+      admin_ui: {order: 16, width: 158}
+      type: bool
+    - name: total_repayment_amount
+      admin_ui: {order: 1.5, width: 200}
+      type: number
+    - name: borrower_customer_id
+      admin_ui: {order: -1, width: 200}
+      type: number
+    - name: member_rom
+      admin_ui: {order: 15.4921875, width: 125}
+      type: string
+    - name: loan_updated_status
+      admin_ui: {order: 0.625, width: 200}
+      type: string
+    - name: lender_full_name
+      admin_ui: {order: 5.375, width: 144}
+      type: string
+    - name: member_since
+      admin_ui: {order: 15.49609375, width: 135}
+      type: date
+    - name: loan_id
+      admin_ui: {order: 0.4375, width: 108}
+      type: string
+    - name: borrower_compLeted_monthly_emi
+      admin_ui: {order: 27, width: 259}
+      type: number
+    - name: lender_email_id
+      admin_ui: {order: 11, width: 209}
+      type: string
+    - name: days_left
+      admin_ui: {order: 28, width: 118}
+      type: number
+    - name: foreclosure_type
+      admin_ui: {order: 23, width: 200}
+      type: string
+    - name: loan_closed_date
+      admin_ui: {order: 23, width: 200}
+      type: date
+    - name: lender_customer_id
+      admin_ui: {order: 5.25, width: 156}
+      type: number
+    - name: beseem_score
+      admin_ui: {order: 15.4765625, width: 129}
+      type: number
+    - name: emi_due_date
+      admin_ui: {order: 23, width: 138}
+      type: date
+    - name: borrower_loan_created_timestamp
+      admin_ui: {order: 8.5, width: 261}
+      type: date
+    - name: product_id
+      admin_ui: {order: 5, width: 103}
+      type: string
+    - name: borrower_first_payment_done
+      admin_ui: {width: 200, order: 27}
+      type: date
+    - name: borrower_last_payment_done
+      admin_ui: {order: 15.5, width: 244}
+      type: date
+    - name: total_payments_made
+      admin_ui: {width: 200, order: 29}
+      type: number
+    - name: membership_type
+      admin_ui: {order: 15.375, width: 139}
+      type: string
+    - name: tenure
+      admin_ui: {order: 8.875, width: 117}
+      type: number
+    - name: loan_amount
+      admin_ui: {order: 0.625, width: 118}
+      type: number
+    - name: lender_accepted_timestamp
+      admin_ui: {order: 15.25, width: 241}
+      type: datetime
+    - name: credit_limit
+      admin_ui: {order: 20.75, width: 122}
+      type: number
+    - name: loan_disbursed_timestamp
+      admin_ui: {order: 15.4375, width: 228}
+      type: datetime
+    - name: loan_extension_months
+      admin_ui: {width: 200, order: 31}
+      type: number
+    - name: first_emi_payment_due_date
+      admin_ui: {order: 15.46875, width: 228}
+      type: date
+    - name: emi_payment_type
+      admin_ui: {order: 15.453125, width: 200}
+      type: string
+    - name: product_name
+      admin_ui: {order: 15.4453125, width: 120}
+      type: string
+    - name: total_interest_amount
+      admin_ui: {order: 0.75, width: 200}
+      type: number
+    - name: total_processing_fee_amount
+      admin_ui: {width: 200}
+      type: number
+    - name: product_description
+      admin_ui: {order: 20.5, width: 200}
+      type: string
+    - name: monthly_emi
+      admin_ui: {width: 200, order: 0.5}
+      type: number
+    title: fin_loan_details
   fin_beseem_score_users:
     client: full
     server: full
