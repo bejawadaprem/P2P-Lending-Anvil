@@ -291,6 +291,9 @@ db_schema:
     - name: product_description
       admin_ui: {width: 200}
       type: string
+    - name: product_discription
+      admin_ui: {width: 200}
+      type: string
     title: fin_product_details
   fin_borrower_organization_type:
     client: full
@@ -876,6 +879,9 @@ db_schema:
     - name: credit_card_loans
       admin_ui: {order: 81.25, width: 200}
       type: string
+    - name: month_estd
+      admin_ui: {width: 200}
+      type: number
     title: fin_user_profile
   fin_admin_beseem_categories:
     client: full
@@ -1108,7 +1114,7 @@ db_schema:
       admin_ui: {order: 12, width: 200}
       type: string
   fin_wallet_bank_account_table:
-    client: full
+    client: none
     server: full
     columns:
     - name: account_id
